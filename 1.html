@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        #nav{
+            width: auto;
+            height: 80px;
+            background-color: yellow;
+            font-size: 30px;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 100px;
+            gap: 10px;
+            margin: 30px;
+            font-size: 20px;
+        }
+        #main>div:nth-child(1){
+            background-color: red;
+        }
+        #main>div:nth-child(2){
+            background-color: #00ff2a;
+        }
+        #main>div:nth-child(3){
+            background-color: #5763ee;
+        }
+        #main>div:nth-child(4){
+            background-color: #989898;
+        }
+
+        @media all and (min-width:480px) and (max-width:720px){
+            #main{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,200px);
+            }
+            #main>div:nth-child(1){
+                order: 0;
+          S
+            }
+            #main>div:nth-child(2){
+                order: 9;
+          
+            }
+            #main>div:nth-child(3){
+                order: 10;
+         
+            }
+            #main>div:nth-child(4){
+                order: 8;
+         
+            }
+        }
+        @media all and (min-width:320px) and (max-width:479px){
+            #main{
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(4,100px);
+            }
+            #main>div:nth-child(1){
+                order: 0;
+          S
+            }
+            #main>div:nth-child(2){
+                order: 9;
+          
+            }
+            #main>div:nth-child(3){
+                order: 10;
+         
+            }
+            #main>div:nth-child(4){
+                order: 8;
+         
+            }
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div id="nav">Navigation</div>
+    <div id="main">
+        <div>box 1</div>
+        <div>box 2</div>
+        <div>box 3</div>
+        <div>box 4</div>
+    </div>
+    
+</body>
+</html>
